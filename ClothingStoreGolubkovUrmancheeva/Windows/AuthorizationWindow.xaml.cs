@@ -29,7 +29,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            var Auth = EFClass.Context.User.ToList().Where(x => x.Login == TbLogin.Text && x.Password == PbPassword.Password).FirstOrDefault();
+            var Auth = EFClass.Context.User.ToList().Where(x => x.Login == TbLogin.Text && x.Password == PbPassword.Text).FirstOrDefault();
             if ( Auth != null )
             {
                 MessageBox.Show("ОК!");
@@ -41,6 +41,26 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
             {
                 MessageBox.Show("Пользователь не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void PbPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PbPassword.Text = "";
+        }
+
+        private void PbPassword_LostFocus(object sender, RoutedEventArgs e)
+        {
+            PbPassword.Text = "Пароль";
+        }
+
+        private void TbLogin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TbLogin.Text = "";
+        }
+
+        private void TbLogin_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TbLogin.Text = "Логин";
         }
     }
 }

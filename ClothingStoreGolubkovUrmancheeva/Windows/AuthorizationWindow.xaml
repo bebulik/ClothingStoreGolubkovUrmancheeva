@@ -20,15 +20,108 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFD93D3D" Margin="0,0,0,36"/>
-        <Label x:Name="RegLabel" Content="Авторизация" FontSize="40" HorizontalAlignment="Left" Margin="130,-6,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" Height="63" Width="249"/>
-        <TextBlock Text="Логин" FontSize="23" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,52,0,0" Height="30" Width="64"/>
-        <TextBlock Text="Пароль" FontSize="23" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="31" Width="80" Margin="115,19,0,0"/>
-        <Button x:Name="BtnSignIn" Content="Авторизоваться" FontSize="16"  Grid.Column="0" Grid.Row="3" Margin="169,16,170,42" Grid.ColumnSpan="2" Background="#FFD93D3D" Click="BtnSignIn_Click"/>
-        <Button FontSize="18" Content="Еще не зарегистрированы ?" Grid.Row="4" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF4170DD" Margin="129,9,133,56" Grid.ColumnSpan="2"/>
-        <Button FontSize="18" Content="Войти как гость" Grid.Row="5" Grid.Column="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF4170DD" Margin="173,4,177,59" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TbLogin" Grid.Row="1" Grid.Column="1" Margin="55,54,36,14" />
-        <PasswordBox x:Name="PbPassword" Grid.Row="2" Grid.Column="1" Margin="55,21,36,46" />
+        <Border 
+            Grid.Column="0" 
+            Grid.ColumnSpan="2" 
+            Grid.Row="0" 
+            Background="#FFD93D3D" 
+            Margin="0,0,0,36"/>
+        <Label 
+            x:Name="RegLabel" 
+            Content="Авторизация" 
+            FontSize="40" 
+            HorizontalAlignment="Left"
+            Margin="130,-6,0,0" 
+            VerticalAlignment="Top" 
+            Grid.ColumnSpan="2"
+            Grid.Column="0" 
+            Grid.Row="0" 
+            Height="63" 
+            Width="249"/>
+        <Button
+            x:Name="BtnSignIn" 
+            Content="Авторизоваться"
+            FontSize="16"  
+            Grid.Column="0"
+            Grid.Row="3"
+            Margin="163,16,162,34" 
+            Grid.ColumnSpan="2"
+            Background="#FFD93D3D" 
+            Click="BtnSignIn_Click"/>
+        <Button 
+            FontSize="18"
+            Content="Еще не зарегистрированы ?"
+            Grid.Row="4" 
+            Grid.Column="0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Foreground="#FF4170DD"
+            Margin="129,9,133,56" 
+            Grid.ColumnSpan="2"/>
+        <Button 
+            FontSize="18" 
+            Content="Войти как гость" 
+            Grid.Row="5" Grid.Column="0" 
+            Background="{x:Null}"
+            BorderBrush="{x:Null}" 
+            Foreground="#FF4170DD"
+            Margin="173,4,177,59" 
+            Grid.ColumnSpan="2"/>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Логин"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbLogin" 
+            Margin="55,8,9,8"
+            BorderBrush="{x:Null}"
+            Foreground="#FF817474"
+            GotFocus="TbLogin_GotFocus"
+            LostFocus="TbLogin_LostFocus"/>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="2"
+            VerticalAlignment="Center" 
+            Width="258"
+            
+            CornerRadius="10">
+            <TextBox 
+            Text="Пароль"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="PbPassword" 
+            Margin="55,8,9,8" 
+            BorderBrush="{x:Null}" 
+            Foreground="#FF817474" 
+            GotFocus="PbPassword_GotFocus"
+            LostFocus="PbPassword_LostFocus"/>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="2" Margin="126,29,83,29">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/d3a06586e8762539ee08a0de9a72396e.png"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="1" Margin="126,29,83,29">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/ico.jpg"/>
+            </Border.Background>
+        </Border>
 
     </Grid>
 </Window>
