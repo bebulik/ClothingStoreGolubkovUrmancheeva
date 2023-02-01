@@ -1,0 +1,45 @@
+﻿<Window x:Class="ClothingStoreGolubkovUrmancheeva.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClothingStoreGolubkovUrmancheeva.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="600" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFD93D3D"/>
+        <Label x:Name="RegLabel" Content="Регистрация" FontSize="40" HorizontalAlignment="Left" Margin="130,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock x:Name="loginTb" Text="Логин" FontSize="23" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
+        <TextBlock x:Name="PassTb" Text="Пароль" FontSize="23" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
+        <TextBlock x:Name="LastNameTb" Text="Фамилия" FontSize="23" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
+        <TextBlock x:Name="FirstNameTb" Text="Имя" FontSize="23" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
+        <TextBlock x:Name="PatronymicTb" Text="Отчество" FontSize="23" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
+        <TextBlock x:Name="RoleTb" Text="Должность" FontSize="23" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
+        <Button x:Name="NotRegBt" Grid.Column="0" Grid.Row="8" Content="Уже зарегистрированы ?" FontSize="18" HorizontalAlignment="Left" Margin="143,20,0,0"  VerticalAlignment="Top" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF4170DD"/>
+        <Button x:Name="GuestBt" Grid.Column="0" Grid.Row="9" Content="Войти как гость" HorizontalAlignment="Left" FontSize="18" Margin="158,14,0,0"  VerticalAlignment="Top" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF4170DD" Width="178"/>
+        <Button Grid.Column="0" FontSize="16" Background="#FFD93D3D" Content="Зарегистрироваться" Grid.ColumnSpan="2" Grid.Row="7" Margin="165,14,171,8" />
+
+        <TextBox Grid.Row="1" Width="200" Height="30" Margin="1,15,49,14" Grid.Column="1"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Width="200" Height="30" Margin="1,15,49,14"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Width="200" Height="30" Margin="1,15,49,14"/>
+        <TextBox Grid.Column="1" Grid.Row="4" Width="200" Height="30" Margin="1,15,49,14"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Width="200" Height="30" Margin="1,15,49,14"/>
+        <TextBox Grid.Column="1" Grid.Row="6" Width="200" Height="30" Margin="1,15,49,14"/>
+    </Grid>
+</Window>
