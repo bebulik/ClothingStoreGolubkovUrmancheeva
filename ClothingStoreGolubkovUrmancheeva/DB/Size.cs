@@ -12,24 +12,18 @@ namespace ClothingStoreGolubkovUrmancheeva.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Size
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public Size()
         {
-            this.ProductOrder = new HashSet<ProductOrder>();
+            this.Product = new HashSet<Product>();
         }
     
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public decimal Price { get; set; }
-        public int QuantityInStock { get; set; }
-        public string Description { get; set; }
-        public string Image { get; set; }
         public int SizeId { get; set; }
+        public string Size1 { get; set; }
     
-        public virtual Size Size { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductOrder> ProductOrder { get; set; }
+        public virtual ICollection<Product> Product { get; set; }
     }
 }
