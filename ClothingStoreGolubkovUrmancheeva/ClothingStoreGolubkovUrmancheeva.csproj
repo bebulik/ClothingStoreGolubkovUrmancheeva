@@ -279,6 +279,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\6506de5c71c403b45bcdf2e312f77564.png" />
+    <Resource Include="Images\491983.png" />
     <Resource Include="Images\ico.jpg" />
     <Resource Include="Images\d3a06586e8762539ee08a0de9a72396e.png" />
   </ItemGroup>

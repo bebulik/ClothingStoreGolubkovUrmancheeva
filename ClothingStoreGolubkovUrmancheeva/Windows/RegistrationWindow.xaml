@@ -25,21 +25,204 @@
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFD93D3D"/>
         <Label x:Name="RegLabel" Content="Регистрация" FontSize="40" HorizontalAlignment="Left" Margin="130,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"/>
-        <TextBlock x:Name="loginTb" Text="Логин" FontSize="23" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
-        <TextBlock x:Name="PassTb" Text="Пароль" FontSize="23" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
-        <TextBlock x:Name="LastNameTb" Text="Фамилия" FontSize="23" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
-        <TextBlock x:Name="FirstNameTb" Text="Имя" FontSize="23" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
-        <TextBlock x:Name="PatronymicTb" Text="Отчество" FontSize="23" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
-        <TextBlock x:Name="RoleTb" Text="Должность" FontSize="23" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,0,0,0"/>
-        <Button x:Name="NotRegBt" Grid.Column="0" Grid.Row="8" Content="Уже зарегистрированы ?" FontSize="18" HorizontalAlignment="Left" Margin="143,20,0,0"  VerticalAlignment="Top" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF4170DD"/>
-        <Button x:Name="GuestBt" Grid.Column="0" Grid.Row="9" Content="Войти как гость" HorizontalAlignment="Left" FontSize="18" Margin="158,14,0,0"  VerticalAlignment="Top" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF4170DD" Width="178"/>
-        <Button Grid.Column="0" FontSize="16" Background="#FFD93D3D" Content="Зарегистрироваться" Grid.ColumnSpan="2" Grid.Row="7" Margin="165,14,171,8" />
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="1"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Логин"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbLogin" 
+            Margin="55,8,9,8"
+            BorderBrush="{x:Null}"
+            Foreground="#FF817474"
+            GotFocus="TbLogin_GotFocus"
+                LostFocus="TbLogin_LostFocus"
+            VerticalAlignment="Center"/>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="2"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Пароль"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbPassword" 
+            Margin="55,8,9,8"
+            BorderBrush="{x:Null}"
+            Foreground="#FF817474"
+                GotFocus="TbPassword_GotFocus"
+                LostFocus="TbPassword_LostFocus"
+            VerticalAlignment="Center"/>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="3"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Фамилия"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbLastName" 
+            Margin="55,8,9,8"
+            BorderBrush="{x:Null}"
+            Foreground="#FF817474"
+                LostFocus="TbLastName_LostFocus"
+                GotFocus="TbLastName_GotFocus"
+            VerticalAlignment="Center"/>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="4"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Имя"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbFirstName" 
+            Margin="55,8,9,8"
+            BorderBrush="{x:Null}"
+            Foreground="#FF817474"
+                GotFocus="TbFirstName_GotFocus"
+                LostFocus="TbFirstName_LostFocus"
+            VerticalAlignment="Center"/>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="5"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Отчество"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbPatronymic" 
+            Margin="55,8,9,8"
+            BorderBrush="{x:Null}"
+                GotFocus="TbPatronymic_GotFocus"
+                LostFocus="TbPatronymic_LostFocus"
+            Foreground="#FF817474"
+            VerticalAlignment="Center"/>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Height="48"
+            Margin="121,0,0,0"
+            Grid.Row="6"
+            VerticalAlignment="Center" 
+            Width="258"
+            CornerRadius="10">
+            <TextBox
+            Text="Должность"
+            TextAlignment="Left"
+            FontSize="18"
+            x:Name="TbRole" 
+            Margin="55,8,9,8"
+                GotFocus="TbRole_GotFocus"
+                LostFocus="TbRole_LostFocus"
+            BorderBrush="{x:Null}"
+            Foreground="#FF817474"
+            VerticalAlignment="Center"/>
+        </Border>
+        <Button
+            x:Name="BtnSignIn" 
+            Content="Авторизоваться"
+            FontSize="20"  
+            Grid.Column="0"
+            Grid.Row="7"
+            Margin="163,16,162,1" 
+            Grid.ColumnSpan="2"
+            Background="#FFD93D3D" />
+        <Button 
+            FontSize="18"
+            Content="Уже зарегистрированы ?"
+            Grid.Row="8" 
+            Grid.Column="0"
+            Background="{x:Null}"
+            BorderBrush="{x:Null}"
+            Foreground="#FF4170DD"
+            Margin="129,9,133,10" 
+            Grid.ColumnSpan="2"/>
+        <Button 
+            FontSize="18" 
+            Content="Войти как гость" 
+            Grid.Row="9" Grid.Column="0" 
+            Background="{x:Null}"
+            BorderBrush="{x:Null}" 
+            Foreground="#FF4170DD"
+            Margin="173,4,177,10" 
+            Grid.ColumnSpan="2"/>
+        <Border BorderThickness="1" Grid.Row="1" Margin="126,10,83,10" Grid.Column="0">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/ico.jpg"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="2" Margin="126,10,83,10" Grid.Column="0">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/d3a06586e8762539ee08a0de9a72396e.png"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="3" Margin="126,10,83,10" Grid.Column="0">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/6506de5c71c403b45bcdf2e312f77564.png"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="4" Margin="126,10,83,10" Grid.Column="0">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/6506de5c71c403b45bcdf2e312f77564.png"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="5" Margin="126,10,83,10" Grid.Column="0">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/6506de5c71c403b45bcdf2e312f77564.png"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Grid.Row="6" Margin="126,10,83,10" Grid.Column="0">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/491983.png"/>
+            </Border.Background>
+        </Border>
 
-        <TextBox Grid.Row="1" Width="200" Height="30" Margin="1,15,49,14" Grid.Column="1"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Width="200" Height="30" Margin="1,15,49,14"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Width="200" Height="30" Margin="1,15,49,14"/>
-        <TextBox Grid.Column="1" Grid.Row="4" Width="200" Height="30" Margin="1,15,49,14"/>
-        <TextBox Grid.Column="1" Grid.Row="5" Width="200" Height="30" Margin="1,15,49,14"/>
-        <TextBox Grid.Column="1" Grid.Row="6" Width="200" Height="30" Margin="1,15,49,14"/>
+
+
     </Grid>
 </Window>

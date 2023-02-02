@@ -41,7 +41,7 @@
         <Button
             x:Name="BtnSignIn" 
             Content="Авторизоваться"
-            FontSize="16"  
+            FontSize="20"  
             Grid.Column="0"
             Grid.Row="3"
             Margin="163,16,162,34" 
@@ -87,7 +87,8 @@
             BorderBrush="{x:Null}"
             Foreground="#FF817474"
             GotFocus="TbLogin_GotFocus"
-            LostFocus="TbLogin_LostFocus"/>
+            LostFocus="TbLogin_LostFocus"
+            VerticalAlignment="Center"/>
         </Border>
         <Border
             BorderBrush="Black" 
@@ -110,14 +111,15 @@
             BorderBrush="{x:Null}" 
             Foreground="#FF817474" 
             GotFocus="PbPassword_GotFocus"
-            LostFocus="PbPassword_LostFocus"/>
+            LostFocus="PbPassword_LostFocus"
+             VerticalAlignment="Center"/>
         </Border>
-        <Border BorderThickness="1" Grid.Row="2" Margin="126,29,83,29">
+        <Border BorderThickness="1" Grid.Row="2" Grid.Column="0" Margin="126,29,83,29">
             <Border.Background>
                 <ImageBrush ImageSource="/Images/d3a06586e8762539ee08a0de9a72396e.png"/>
             </Border.Background>
         </Border>
-        <Border BorderThickness="1" Grid.Row="1" Margin="126,29,83,29">
+        <Border BorderThickness="1" Grid.Row="1" Margin="126,29,83,29" Grid.Column="0">
             <Border.Background>
                 <ImageBrush ImageSource="/Images/ico.jpg"/>
             </Border.Background>
