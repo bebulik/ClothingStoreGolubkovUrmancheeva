@@ -11,7 +11,7 @@
 ![image](https://user-images.githubusercontent.com/123931026/215418332-e8f0eab4-3f72-4d72-9b66-389030460748.png)
 <b>Окно регистрации</b>
 
-![image](https://user-images.githubusercontent.com/123931026/215418455-83da5bd4-ebbc-4220-a4dd-e466b71461dd.png)
+![image](https://user-images.githubusercontent.com/123931026/216277038-5b687c28-386a-4740-ba01-418de8a79645.png)
 <b>Окно авторизации</b>
 
 ![image](https://user-images.githubusercontent.com/123931026/215418599-e397f7b5-4d67-41f3-a5ab-3b5e614849a3.png)
