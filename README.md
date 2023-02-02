@@ -8,7 +8,7 @@
 ![image](https://user-images.githubusercontent.com/123931026/215418194-ec25d4e5-3801-48a6-9429-dc10d4291e6d.png)
 <b>Структура проекта</b>
 
-![image](https://user-images.githubusercontent.com/123931026/215418332-e8f0eab4-3f72-4d72-9b66-389030460748.png)
+![image](https://user-images.githubusercontent.com/123931026/216389928-ca9f5bb6-2464-4b62-af53-bd08a6e6a711.png)
 <b>Окно регистрации</b>
 
 ![image](https://user-images.githubusercontent.com/123931026/216277038-5b687c28-386a-4740-ba01-418de8a79645.png)
