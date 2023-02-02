@@ -2,7 +2,7 @@
 
 <b><i>Проект Урманчеевой А.О. и Голубкова Д.С.</i></b>
 
-![image](https://user-images.githubusercontent.com/123931026/215417940-a909c4bd-5549-400c-b82b-e6e8e11e3e13.png)
+![image](https://user-images.githubusercontent.com/123931026/216277252-38b5e23b-594c-4588-a2e1-2aa0ad5ae186.png)
 <b>Структура базы данных</b>
 
 ![image](https://user-images.githubusercontent.com/123931026/215418194-ec25d4e5-3801-48a6-9429-dc10d4291e6d.png)
