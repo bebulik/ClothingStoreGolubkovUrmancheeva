@@ -27,10 +27,10 @@ namespace ClothingStoreGolubkovUrmancheeva.DB
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string Patronymic { get; set; }
-        public int RoleId { get; set; }
         public string GenderId { get; set; }
         public System.DateTime Birthdate { get; set; }
         public string Phone { get; set; }
+        public int RoleId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Client> Client { get; set; }

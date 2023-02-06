@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using ClothingStoreGolubkovUrmancheeva.ClassHelper;
+using ClothingStoreGolubkovUrmancheeva.DB;
+using ClothingStoreGolubkovUrmancheeva.Windows;
+
 namespace ClothingStoreGolubkovUrmancheeva.Windows
 {
     /// <summary>
@@ -22,6 +26,10 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
         public RegistrationWindow()
         {
             InitializeComponent();
+            CmbGender.ItemsSource = ClassHelper.EFClass.Context.Gender.ToList();
+            CmbGender.SelectedIndex = 0;
+            CmbGender.DisplayMemberPath = "GenderName";
+
         }
 
         private void TbLogin_GotFocus(object sender, RoutedEventArgs e)
@@ -73,15 +81,50 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
         {
             TbPatronymic.Text = "Отчество";
         }
-
-        private void TbRole_GotFocus(object sender, RoutedEventArgs e)
+        private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            TbRole.Text = "";
-        }
+            if (string.IsNullOrWhiteSpace(TbLogin.Text))
+            {
+                MessageBox.Show("Поле логин должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TbPassword.Text))
+            {
+                MessageBox.Show("Поле пароль должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TbLastName.Text))
+            {
+                MessageBox.Show("Поле фамилия должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TbFirstName.Text))
+            {
+                MessageBox.Show("Поле имя должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TbPhone.Text))
+            {
+                MessageBox.Show("Поле телефон должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            
 
-        private void TbRole_LostFocus(object sender, RoutedEventArgs e)
-        {
-            TbRole.Text = "Должность";
+            EFClass.Context.User.Add(new User
+            {
+                Login = TbLogin.Text,
+                Password = TbPassword.Text,
+                FirstName = TbFirstName.Text,
+                LastName = TbLastName.Text,
+                Patronymic = TbPatronymic.Text,
+                Phone = TbPhone.Text,
+                Birthdate = DpBirthday.SelectedDate.Value,
+                GenderId = (CmbGender.SelectedItem as Gender).GenderId,
+                RoleId = 3
+            }) ;
+
+            EFClass.Context.SaveChanges();
+            MessageBox.Show("Регистрация прошла успешно!");
         }
     }
 }

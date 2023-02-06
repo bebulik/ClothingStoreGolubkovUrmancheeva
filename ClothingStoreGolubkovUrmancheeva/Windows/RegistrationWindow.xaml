@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClothingStoreGolubkovUrmancheeva.Windows"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="600" Width="500">
+        Title="RegistrationWindow" Height="720" Width="500">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
@@ -152,13 +154,11 @@
             Width="258"
             CornerRadius="10">
             <TextBox
-            Text="Должность"
+            Text="Номер телефона"
             TextAlignment="Left"
             FontSize="18"
-            x:Name="TbRole" 
-            Margin="55,8,9,8"
-                GotFocus="TbRole_GotFocus"
-                LostFocus="TbRole_LostFocus"
+            x:Name="TbPhone" 
+            Margin="55,8,9,8"   
             BorderBrush="{x:Null}"
             Foreground="#FF817474"
             VerticalAlignment="Center"/>
@@ -168,14 +168,15 @@
             Content="Авторизоваться"
             FontSize="20"  
             Grid.Column="0"
-            Grid.Row="7"
+            Grid.Row="9"
             Margin="163,16,162,1" 
             Grid.ColumnSpan="2"
-            Background="#FFD93D3D" />
+            Background="#FFD93D3D" 
+            Click="BtnSignIn_Click"/>
         <Button 
             FontSize="18"
             Content="Уже зарегистрированы ?"
-            Grid.Row="8" 
+            Grid.Row="10" 
             Grid.Column="0"
             Background="{x:Null}"
             BorderBrush="{x:Null}"
@@ -185,12 +186,14 @@
         <Button 
             FontSize="18" 
             Content="Войти как гость" 
-            Grid.Row="9" Grid.Column="0" 
+            Grid.Row="11" Grid.Column="0" 
             Background="{x:Null}"
             BorderBrush="{x:Null}" 
             Foreground="#FF4170DD"
             Margin="173,4,177,10" 
             Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="DpBirthday" Grid.Row="7" Grid.ColumnSpan="2" Margin="126,10,125,10"/>
+        <ComboBox x:Name="CmbGender" Grid.Row="8" Grid.ColumnSpan="2" Margin="126,10,125,10"/>
         <Border BorderThickness="1" Grid.Row="1" Margin="126,10,83,10" Grid.Column="0">
             <Border.Background>
                 <ImageBrush ImageSource="/Images/ico.jpg"/>
