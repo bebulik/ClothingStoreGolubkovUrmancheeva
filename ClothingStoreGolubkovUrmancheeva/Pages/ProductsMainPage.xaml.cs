@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClothingStoreGolubkovUrmancheeva.ClassHelper;
+using ClothingStoreGolubkovUrmancheeva.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,16 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
         public ClothesPage()
         {
             InitializeComponent();
+            GetListProduct();
+            
         }
+        public void GetListProduct()
+        {
+            List<Product> products = new List<Product>();
+            products = EFClass.Context.Product.ToList();
+
+            LvProduct.ItemsSource = products;
+        }
+
     }
 }

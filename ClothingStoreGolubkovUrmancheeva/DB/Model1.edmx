@@ -53,7 +53,7 @@
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="QuantityInStock" Type="int" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
-          <Property Name="Image" Type="nvarchar" MaxLength="2048" Nullable="false" />
+          <Property Name="Image" Type="varbinary(max)" />
           <Property Name="SizeId" Type="int" Nullable="false" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
@@ -404,7 +404,7 @@
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="QuantityInStock" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Image" Type="String" Nullable="false" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="SizeId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Size" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_Product_Size" FromRole="Product" ToRole="Size" />
           <NavigationProperty Name="ProductOrder" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_ProductOrder_Product" FromRole="Product" ToRole="ProductOrder" />

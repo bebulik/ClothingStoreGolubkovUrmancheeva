@@ -25,7 +25,7 @@ namespace ClothingStoreGolubkovUrmancheeva.DB
         public decimal Price { get; set; }
         public int QuantityInStock { get; set; }
         public string Description { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public int SizeId { get; set; }
     
         public virtual Size Size { get; set; }

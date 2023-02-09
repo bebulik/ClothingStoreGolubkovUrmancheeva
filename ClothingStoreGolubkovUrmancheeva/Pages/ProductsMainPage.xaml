@@ -9,6 +9,29 @@
       Title="ClothesPage">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Список товаров"
+                   FontSize="30"
+                   HorizontalAlignment="Center"/>
+        <ListView Grid.Row="2" x:Name="LvProduct" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+                
+                
+
+            </ListView.ItemsPanel>
+                
+
+
+        </ListView>
         
+
     </Grid>
 </Page>
