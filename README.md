@@ -20,3 +20,6 @@
 
 ![image](https://user-images.githubusercontent.com/123931026/215418681-5fafcc1f-4d4e-4efe-b7fb-54ab443e4758.png)
 <b>EFClass</b>
+
+![image](https://user-images.githubusercontent.com/123931026/218395721-34b47f77-03ed-4b3a-bcce-b5a3ceb0674b.png)
+<b>Список товаров</b>
