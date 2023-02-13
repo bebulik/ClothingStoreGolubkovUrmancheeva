@@ -24,8 +24,8 @@ namespace ClothingStoreGolubkovUrmancheeva
         public MainWindow()
         {
             InitializeComponent();
-            ClientCartPage clientsCartPage = new ClientCartPage();
-            MainFrame.Navigate(clientsCartPage);
+            ProductsPage1 pr = new ProductsPage1();
+            MainFrame.Navigate(pr);
         }
 
       

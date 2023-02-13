@@ -134,6 +134,9 @@
     <Compile Include="Pages\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProductsPage1.xaml.cs">
+      <DependentUpon>ProductsPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
@@ -183,6 +186,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProductsPage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -279,6 +286,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\кедики.jpg" />
+    <Resource Include="Images\Футболка.jpg" />
+    <Resource Include="Images\цок цоки.jpg" />
     <Resource Include="Images\6506de5c71c403b45bcdf2e312f77564.png" />
     <Resource Include="Images\491983.png" />
     <Resource Include="Images\ico.jpg" />
