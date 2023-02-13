@@ -286,6 +286,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\боты.jpg" />
     <Resource Include="Images\кедики.jpg" />
     <Resource Include="Images\Футболка.jpg" />
     <Resource Include="Images\цок цоки.jpg" />

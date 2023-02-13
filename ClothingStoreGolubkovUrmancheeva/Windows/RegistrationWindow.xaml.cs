@@ -103,7 +103,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
                 MessageBox.Show("Поле имя должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(TbPhone.Text))
+            if (string.IsNullOrWhiteSpace(TbPhone.Text) )
             {
                 MessageBox.Show("Поле телефон должно быть заполнено", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;

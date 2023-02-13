@@ -14,13 +14,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="#FFD93D3D">
+        <Border Grid.Row="0" >
             <TextBlock Text="Список товаров"
                    FontSize="30" 
                    HorizontalAlignment="Center"/>
         </Border>
         
-        <ListView Grid.Row="2" x:Name="LvProduct" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" >
+        <ListView Grid.Row="2" x:Name="LvProduct" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="{x:Null}" >
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -35,7 +35,7 @@
                     <Border  Height="130" Width="100" BorderBrush="Black">
 
                         <StackPanel>
-                            <Image Margin="1 1 1 1" Source="/Images/цок цоки.jpg" >
+                            <Image Margin="1 1 1 1" Source="/Images/боты.jpg" >
 
                             </Image>
                             <TextBlock Text="{Binding ProductName}"/>
