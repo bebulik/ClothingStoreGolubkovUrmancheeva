@@ -50,6 +50,10 @@
 
         </ListView>
 
+        <Button x:Name="addProductBtn" Content="Добавить товар" Grid.Row="3" Width="120" 
+                Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"
+                Click="addProductBtn_Click"/>
+
 
     </Grid>
 </Page>

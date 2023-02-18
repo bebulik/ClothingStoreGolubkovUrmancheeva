@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using ClothingStoreGolubkovUrmancheeva.ClassHelper;
 using ClothingStoreGolubkovUrmancheeva.DB;
 using ClothingStoreGolubkovUrmancheeva.Pages;
+using ClothingStoreGolubkovUrmancheeva.Windows;
 
 namespace ClothingStoreGolubkovUrmancheeva.Pages
 {
@@ -39,6 +40,12 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
                 LvProduct.ItemsSource = products;
             }
 
-        
+        private void addProductBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ProductAddingWindow additingwindow = new ProductAddingWindow();
+            additingwindow.ShowDialog();
+            GetListProduct();
+
+        }
     }
 }
