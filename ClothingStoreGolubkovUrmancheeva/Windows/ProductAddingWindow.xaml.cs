@@ -51,7 +51,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
         {
             Product product = new Product();
             product.ProductName = TbName.Text;
-            product.Price = TbPrice.Text;
+            product.Price = Convert.ToDecimal(TbPrice.Text);
         }
     }
 }

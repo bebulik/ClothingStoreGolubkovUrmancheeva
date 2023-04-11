@@ -57,7 +57,7 @@
             BorderBrush="{x:Null}"
             Foreground="#FF4170DD"
             Margin="129,9,133,56" 
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button 
             FontSize="18" 
             Content="Войти как гость" 

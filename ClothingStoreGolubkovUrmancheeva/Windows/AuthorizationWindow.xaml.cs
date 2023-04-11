@@ -32,10 +32,24 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
             var Auth = EFClass.Context.User.ToList().Where(x => x.Login == TbLogin.Text && x.Password == PbPassword.Text).FirstOrDefault();
             if ( Auth != null )
             {
-                MessageBox.Show("ОК!");
-                MainWindow Bebra = new MainWindow();
-                Bebra.Show();
-                this.Close();
+                UserClass.user = Auth;
+                switch (Auth.RoleId)
+                {
+                    case 1:
+                        MessageBox.Show("ОК!");
+                        MainWindow Bebra = new MainWindow();
+                        Bebra.Show();
+                        this.Close();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+
+                    default:
+                        break;
+                }
+                
             }
             else
             {
@@ -50,7 +64,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void PbPassword_LostFocus(object sender, RoutedEventArgs e)
         {
-            PbPassword.Text = "Пароль";
+            
         }
 
         private void TbLogin_GotFocus(object sender, RoutedEventArgs e)
@@ -60,7 +74,14 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void TbLogin_LostFocus(object sender, RoutedEventArgs e)
         {
-            TbLogin.Text = "Логин";
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registration = new RegistrationWindow();
+            registration.Show();
+            this.Close();
         }
     }
 }

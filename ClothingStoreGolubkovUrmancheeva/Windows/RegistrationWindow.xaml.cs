@@ -39,7 +39,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void TbLogin_LostFocus(object sender, RoutedEventArgs e)
         {
-            TbLogin.Text = "Логин";
+            
         }
 
         private void TbPassword_GotFocus(object sender, RoutedEventArgs e)
@@ -49,12 +49,12 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void TbPassword_LostFocus(object sender, RoutedEventArgs e)
         {
-            TbPassword.Text = "Пароль";
+            
         }
 
         private void TbLastName_LostFocus(object sender, RoutedEventArgs e)
         {
-            TbLastName.Text = "Фамилия";
+            
         }
 
         private void TbLastName_GotFocus(object sender, RoutedEventArgs e)
@@ -69,7 +69,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void TbFirstName_LostFocus(object sender, RoutedEventArgs e)
         {
-            TbFirstName.Text = "Имя";
+            
         }
 
         private void TbPatronymic_GotFocus(object sender, RoutedEventArgs e)
@@ -79,7 +79,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
         private void TbPatronymic_LostFocus(object sender, RoutedEventArgs e)
         {
-            TbPatronymic.Text = "Отчество";
+            
         }
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
@@ -125,6 +125,18 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
 
             EFClass.Context.SaveChanges();
             MessageBox.Show("Регистрация прошла успешно!");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AuthorizationWindow authorization = new AuthorizationWindow();
+            authorization.Show();
+            this.Close();
+        }
+
+        private void TbPhone_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TbPhone.Text = "";
         }
     }
 }
