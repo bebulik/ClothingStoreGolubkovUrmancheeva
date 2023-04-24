@@ -26,24 +26,43 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
     {
        
         
-            public ProductsPage1()
-            {
-                InitializeComponent();
-                GetListProduct();
+        public ProductsPage1()
+        {
+            InitializeComponent();
+            GetListProduct();
 
-            }
-            public void GetListProduct()
-            {
-                List<Product> products = new List<Product>();
-                products = EFClass.Context.Product.ToList();
+        }
+        public void GetListProduct()
+        {
+            List<Product> products = new List<Product>();
+            products = EFClass.Context.Product.ToList();
 
-                LvProduct.ItemsSource = products;
-            }
+            LvProduct.ItemsSource = products;
+        }
 
         private void addProductBtn_Click(object sender, RoutedEventArgs e)
         {
             ProductAddingWindow additingwindow = new ProductAddingWindow();
             additingwindow.ShowDialog();
+            GetListProduct();
+
+        }
+
+       
+
+        private void EditProductBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            Product selectedProduct = button.DataContext as Product;
+
+            ProductAddingWindow  product= new ProductAddingWindow(selectedProduct);
+            product.ShowDialog();
+
             GetListProduct();
 
         }
