@@ -9,6 +9,15 @@
       Title="EmployeesPage">
 
     <Grid>
+        <DataGrid x:Name="dgEmpl">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{Binding LastName}">
+                    
+                </DataGridTextColumn>
+                
+            </DataGrid.Columns>
+            
+        </DataGrid>  
         
     </Grid>
 </Page>

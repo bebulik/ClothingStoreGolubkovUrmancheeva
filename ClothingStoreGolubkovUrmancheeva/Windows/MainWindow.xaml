@@ -9,7 +9,7 @@
     <Grid>
         <Border BorderThickness="1" HorizontalAlignment="Center" Height="78" Margin="0,-3,0,0" VerticalAlignment="Top" Width="1202" Background="#FFD93D3D">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button x:Name="button" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>
+                <Button x:Name="button" Content="Button" Width="80" Height="30" Margin="0 0 150 0" Click="button_Click"/>
                 <Button x:Name="button1" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>
                 <Button x:Name="button2" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>
                 <Button x:Name="button3" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>

@@ -28,6 +28,10 @@ namespace ClothingStoreGolubkovUrmancheeva
             MainFrame.Navigate(pr);
         }
 
-      
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeesPage ep = new EmployeesPage();
+            MainFrame.Navigate(ep);
+        }
     }
 }
