@@ -45,5 +45,22 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
             employeeAddEditWindow.ShowDialog();
             GetListEmployee();
         }
+
+        private void dgEmpl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            User item = dgEmpl.SelectedItem as User;
+            EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow(item);
+            employeeAddEditWindow.ShowDialog();
+            GetListEmployee();
+            
+        }
+
+        private void btnEditEmpl_Click(object sender, RoutedEventArgs e)
+        {
+            User item = dgEmpl.SelectedItem as User;
+            EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow(item);
+            employeeAddEditWindow.ShowDialog();
+            GetListEmployee();
+        }
     }
 }

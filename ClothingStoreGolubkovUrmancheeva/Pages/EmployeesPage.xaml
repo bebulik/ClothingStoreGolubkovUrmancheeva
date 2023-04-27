@@ -10,14 +10,14 @@
 
     <Grid >
         
-        <DataGrid x:Name="dgEmpl" Margin="-2,1,1,0">
+        <DataGrid x:Name="dgEmpl" MouseDoubleClick="dgEmpl_MouseDoubleClick" >
             <DataGrid.Columns>
                 
             </DataGrid.Columns>
 
         </DataGrid>
         <Button Margin="650,401,20,10" x:Name="btnAddEmpl" Content="Добавить работника" Click="btnAddEmpl_Click"/>
-        <Button Margin="20,401,650,10" x:Name="btnEditEmpl" Content="Изменить работника"/>
+        <Button Margin="20,401,650,10" x:Name="btnEditEmpl" Content="Изменить работника" Click="btnEditEmpl_Click"/>
 
     </Grid>
 </Page>

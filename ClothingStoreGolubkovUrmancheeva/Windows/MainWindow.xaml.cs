@@ -24,8 +24,7 @@ namespace ClothingStoreGolubkovUrmancheeva
         public MainWindow(int a)
         {
             InitializeComponent();
-            ProductsPage1 pr = new ProductsPage1();
-            MainFrame.Navigate(pr);
+            
             if(a == 2)
             {
                 btnEmpl.Visibility = Visibility.Hidden;
@@ -34,6 +33,7 @@ namespace ClothingStoreGolubkovUrmancheeva
             {
                 btnEmpl.Visibility = Visibility.Hidden;
                 btnClothes.Visibility = Visibility.Hidden;
+                btnClients.Visibility = Visibility.Hidden;
             }
         }
 
