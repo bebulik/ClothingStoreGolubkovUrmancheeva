@@ -34,13 +34,13 @@
                 <DataTemplate>
                     <Border  Height="130" Width="100" BorderBrush="Black">
 
-                        <StackPanel>
+                        <StackPanel Margin="0,0,0,-25">
                             <Image Margin="1 1 1 1" x:Name="ProdImg" Source="/Images/боты.jpg" >
 
                             </Image>
                             <TextBlock x:Name ="TbName"  Text="{Binding ProductName}"/>
                             <TextBlock Text="{Binding Price}"/>
-                            <Button Background="#FFD93D3D" Content="В корзину"/>
+                            <Button x:Name="btnMore" Background="#FFD93D3D" Content="Подробнее" FontSize="10" Click="btnMore_Click"/>
                         </StackPanel>
                     </Border>
 
@@ -55,7 +55,7 @@
                 Click="addProductBtn_Click"/>
         <Button x:Name="EditProductBtn" Content="Изменить товар" Grid.Row="3" Width="120" 
                 Height="30" HorizontalAlignment="Left" Margin="20,0,0,0"
-                Click="EditProductBtn_Click"/>
+                />
 
 
     </Grid>

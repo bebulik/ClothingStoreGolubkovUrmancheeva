@@ -9,6 +9,12 @@
       Title="ClientsPage">
 
     <Grid>
+        <DataGrid x:Name="dgClients">
+            
+        </DataGrid>
+        <Button x:Name="btnEdit" Width="100" Height="30" Margin="13,411,687,9" Content="Изменить клиента" FontSize="10"/>
+        <Button x:Name="btnAdd" Width="100" Height="30" Margin="691,416,9,4" Content="Добавить клиента" FontSize="10" Click="btnAdd_Click"/>
         
+
     </Grid>
 </Page>

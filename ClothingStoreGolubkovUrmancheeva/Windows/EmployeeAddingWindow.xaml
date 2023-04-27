@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClothingStoreGolubkovUrmancheeva.Windows"
         mc:Ignorable="d"
-        Title="EmployeeAddingWindow" Height="450" Width="800">
+        Title="EmployeeAddingWindow" Height="" Width="800">
     <Grid>
         
     </Grid>

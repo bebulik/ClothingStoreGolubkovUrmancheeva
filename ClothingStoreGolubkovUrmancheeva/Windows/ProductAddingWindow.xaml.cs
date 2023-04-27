@@ -44,7 +44,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
             // Заполнение комбобокса
 
             CmbSize.ItemsSource = EFClass.Context.Size.ToList();
-            CmbSize.DisplayMemberPath = "Name";
+            CmbSize.DisplayMemberPath = "Size";
             CmbSize.SelectedIndex = 0;
 
             // заполнение полей значениями 

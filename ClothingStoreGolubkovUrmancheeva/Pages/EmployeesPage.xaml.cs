@@ -26,18 +26,24 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
         public EmployeesPage()
         {
             InitializeComponent();
-            GetListProduct();
+            GetListEmployee();
         }
-        public void GetListProduct()
+        public void GetListEmployee()
         {
             var query =
 
-            from User in e.User join Role
-            where User.RoleId == 1 || User.RoleId == 2
-            
-            orderby User.LastName
-            select new { User.LastName, User.FirstName, User.Patronymic, User.Birthdate,  };
+            from U  in e.User join R  in e.Role on U.RoleId equals R.RoleId
+            where U.RoleId == 1 || U.RoleId == 2
+            orderby U.FirstName
+            select new {U.Login, U.Password, U.LastName, U.FirstName, U.Patronymic, U.Birthdate, R.RoleName, U.GenderId, U.Phone };
             dgEmpl.ItemsSource = query.ToList();
+        }
+
+        private void btnAddEmpl_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow();
+            employeeAddEditWindow.ShowDialog();
+            GetListEmployee();
         }
     }
 }

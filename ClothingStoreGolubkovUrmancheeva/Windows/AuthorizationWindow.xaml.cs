@@ -33,22 +33,29 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
             if ( Auth != null )
             {
                 UserClass.user = Auth;
-                switch (Auth.RoleId)
+                if (Auth.RoleId == 1)
                 {
-                    case 1:
-                        MessageBox.Show("ОК!");
-                        MainWindow Bebra = new MainWindow();
-                        Bebra.Show();
-                        this.Close();
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-
-                    default:
-                        break;
+                    MessageBox.Show("ОК!");
+                    MainWindow Bebra = new MainWindow(1);
+                    Bebra.Show();
+                    this.Close();
                 }
+                else if(Auth.RoleId == 2) 
+                {
+                    MessageBox.Show("ОК!");
+                    MainWindow Bebra = new MainWindow(2);
+                    Bebra.Show();
+                    this.Close();
+                }
+                else if (Auth.RoleId == 3)
+                {
+                    MessageBox.Show("ОК!");
+                    MainWindow Bebra = new MainWindow(3);
+                    Bebra.Show();
+                    this.Close();
+                }
+                
+                 
                 
             }
             else

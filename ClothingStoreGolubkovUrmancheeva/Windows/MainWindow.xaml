@@ -9,13 +9,13 @@
     <Grid>
         <Border BorderThickness="1" HorizontalAlignment="Center" Height="78" Margin="0,-3,0,0" VerticalAlignment="Top" Width="1202" Background="#FFD93D3D">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button x:Name="button" Content="Button" Width="80" Height="30" Margin="0 0 150 0" Click="button_Click"/>
-                <Button x:Name="button1" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>
-                <Button x:Name="button2" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>
-                <Button x:Name="button3" Content="Button" Width="80" Height="30" Margin="0 0 150 0"/>
+                <Button x:Name="btnEmpl" Content="Работники" Width="100" Height="30" Margin="0 0 150 0" Click="button_Click"/>
+                <Button x:Name="btnClothes" Content="Товары" Width="100" Height="30" Margin="0 0 150 0" Click="btnClothes_Click"/>
+                <Button x:Name="btnClients" Content="Список клиентов" Width="100" Height="30" Margin="0 0 150 0" Click="btnClients_Click"/>
+                <Button x:Name="button3" Content="Button" Width="100" Height="30" Margin="0 0 0 0"/>
             </WrapPanel>
         </Border>
-        <Frame x:Name="MainFrame" Content="Frame" Margin="1,73,-1,2" />
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Content="Frame" Margin="1,73,-1,2" />
 
     </Grid>
 </Window>

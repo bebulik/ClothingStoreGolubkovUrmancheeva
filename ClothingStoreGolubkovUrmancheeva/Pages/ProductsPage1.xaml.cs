@@ -48,9 +48,8 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
 
         }
 
-       
-
-        private void EditProductBtn_Click(object sender, RoutedEventArgs e)
+      
+        private void btnMore_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             if (button == null)
@@ -60,11 +59,10 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
 
             Product selectedProduct = button.DataContext as Product;
 
-            ProductAddingWindow  product= new ProductAddingWindow(selectedProduct);
-            product.ShowDialog();
+            ProductAddingWindow product1 = new ProductAddingWindow(selectedProduct);
+            product1.ShowDialog();
 
             GetListProduct();
-
         }
     }
 }

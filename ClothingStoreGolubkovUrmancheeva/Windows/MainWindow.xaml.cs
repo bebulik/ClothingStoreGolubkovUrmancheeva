@@ -21,17 +21,38 @@ namespace ClothingStoreGolubkovUrmancheeva
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(int a)
         {
             InitializeComponent();
             ProductsPage1 pr = new ProductsPage1();
             MainFrame.Navigate(pr);
+            if(a == 2)
+            {
+                btnEmpl.Visibility = Visibility.Hidden;
+            }
+            if (a == 3)
+            {
+                btnEmpl.Visibility = Visibility.Hidden;
+                btnClothes.Visibility = Visibility.Hidden;
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             EmployeesPage ep = new EmployeesPage();
             MainFrame.Navigate(ep);
+        }
+
+        private void btnClothes_Click(object sender, RoutedEventArgs e)
+        {
+            ProductsPage1 pr = new ProductsPage1();
+            MainFrame.Navigate(pr);
+        }
+
+        private void btnClients_Click(object sender, RoutedEventArgs e)
+        {
+            ClientsPage cp = new ClientsPage();
+            MainFrame.Navigate(cp);
         }
     }
 }

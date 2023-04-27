@@ -8,16 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="EmployeesPage">
 
-    <Grid>
-        <DataGrid x:Name="dgEmpl">
+    <Grid >
+        
+        <DataGrid x:Name="dgEmpl" Margin="-2,1,1,0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{Binding LastName}">
-                    
-                </DataGridTextColumn>
                 
             </DataGrid.Columns>
-            
-        </DataGrid>  
-        
+
+        </DataGrid>
+        <Button Margin="650,401,20,10" x:Name="btnAddEmpl" Content="Добавить работника" Click="btnAddEmpl_Click"/>
+        <Button Margin="20,401,650,10" x:Name="btnEditEmpl" Content="Изменить работника"/>
+
     </Grid>
 </Page>
