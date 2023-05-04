@@ -135,5 +135,37 @@ namespace ClothingStoreGolubkovUrmancheeva.Windows
             }
 
         }
+        public double FridayPrice(int price, DateTime date)
+           
+        {
+            int month = date.Month;
+            int year = date.Year;
+            List<DateTime> fridays = new List<DateTime> { };
+
+            for (int i = 0; i < System.DateTime.DaysInMonth(year, month ); i++)
+            {
+                DateTime dt = new DateTime(year, month, i);
+                if (dt.DayOfWeek == DayOfWeek.Friday) {
+                    fridays.Add(dt);
+                }
+                if (fridays.Count == 3) 
+                {
+                    break;
+                }
+                
+                
+            }
+            if(date.Date == fridays[3].Date)
+            {
+                double newPrice = price / 100 * 89;
+                return newPrice;
+            }
+            else
+            {
+                return price;
+            }
+            
+
+        }
     }
 }
