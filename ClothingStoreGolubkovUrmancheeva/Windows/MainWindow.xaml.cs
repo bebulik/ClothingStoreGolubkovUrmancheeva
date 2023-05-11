@@ -54,5 +54,11 @@ namespace ClothingStoreGolubkovUrmancheeva
             ClientsPage cp = new ClientsPage();
             MainFrame.Navigate(cp);
         }
+
+        private void btnCart_Click(object sender, RoutedEventArgs e)
+        {
+           ClientCartPage cp = new ClientCartPage();
+            MainFrame.Navigate(cp);
+        }
     }
 }

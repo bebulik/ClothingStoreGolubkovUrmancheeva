@@ -19,36 +19,43 @@
                    FontSize="30" 
                    HorizontalAlignment="Center"/>
         </Border>
+        
 
-        <ListView Grid.Row="2" x:Name="LvProduct" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="{x:Null}" >
+           
 
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel/>
-                </ItemsPanelTemplate>
+            <ListView Grid.Row="2" x:Name="LvProduct" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="{x:Null}" >
 
-
-
-            </ListView.ItemsPanel>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Border  Height="130" Width="100" BorderBrush="Black">
-
-                        <StackPanel Margin="0,0,0,-25">
-                            <Image Margin="1 1 1 1" x:Name="ProdImg" Source="/Images/боты.jpg" >
-
-                            </Image>
-                            <TextBlock x:Name ="TbName"  Text="{Binding ProductName}"/>
-                            <TextBlock Text="{Binding Price}"/>
-                            <Button x:Name="btnMore" Background="#FFD93D3D" Content="Подробнее" FontSize="10" Click="btnMore_Click"/>
-                        </StackPanel>
-                    </Border>
-
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
 
 
-        </ListView>
+
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border  Height="130" Width="100" BorderBrush="Black">
+
+                            <StackPanel Margin="0,0,0,-25">
+                                <Image Margin="1 1 1 1" x:Name="ProdImg" Source="/Images/боты.jpg" />
+                                <TextBlock x:Name ="TbName"  Text="{Binding ProductName}"/>
+                                <TextBlock Text="{Binding Price}"/>
+                                <WrapPanel>
+                                    <Button x:Name="btnMore" Margin="0 0 0 0" Width="40" Height="20" Background="#FFD93D3D" Content="Подробнее" FontSize="10" Click="btnMore_Click"/>
+                                    <Button x:Name="btnAddToCart" Margin="20 0 0 0" Width="40" Height="20" Background="#FFD93D3D" Content="В корзину" FontSize="10" Click="btnAddToCart_Click" />
+
+                                </WrapPanel>
+
+                            </StackPanel>
+                        </Border>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+        
 
         <Button x:Name="addProductBtn" Content="Добавить товар" Grid.Row="3" Width="120" 
                 Height="30" HorizontalAlignment="Right" Margin="0 0 20 0"

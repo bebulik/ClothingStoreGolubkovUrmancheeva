@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClothingStoreGolubkovUrmancheeva.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
         public ClientCartPage()
         {
             InitializeComponent();
+            GetCartList();
+        }
+        public void GetCartList()
+        {
+            LvProduct.ItemsSource = ClassHelper.CartClass.products;
+        }
+
+        private void btnDeleteFromCart_Click(object sender, RoutedEventArgs e)
+            
+        {
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            Product selectedProduct = button.DataContext as Product;
+            ClassHelper.CartClass.products.Remove(selectedProduct);
+            GetCartList();
         }
     }
 }

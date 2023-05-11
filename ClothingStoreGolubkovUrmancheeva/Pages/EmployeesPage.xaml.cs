@@ -37,6 +37,9 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
             orderby U.FirstName
             select new {U.Login, U.Password, U.LastName, U.FirstName, U.Patronymic, U.Birthdate, R.RoleName, U.GenderId, U.Phone };
             dgEmpl.ItemsSource = query.ToList();
+            //List<Employee> employees = new List<Employee>();
+            //employees = EFClass.Context.Employee.ToList();
+            //dgEmpl.ItemsSource = employees;
         }
 
         private void btnAddEmpl_Click(object sender, RoutedEventArgs e)
@@ -57,9 +60,13 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
 
         private void btnEditEmpl_Click(object sender, RoutedEventArgs e)
         {
-            User item = dgEmpl.SelectedItem as User;
-            EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow(item);
-            employeeAddEditWindow.ShowDialog();
+            User user = new User();
+            user.Gender = dgEmpl.log as Gender;
+            user.Phone = dgEmpl.
+            EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow(user);
+            Console.WriteLine(user);
+            employeeAddEditWindow.Show();
+            
             GetListEmployee();
         }
     }

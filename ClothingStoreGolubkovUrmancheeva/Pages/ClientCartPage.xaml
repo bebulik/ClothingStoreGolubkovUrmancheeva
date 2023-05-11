@@ -9,7 +9,57 @@
       Title="ClientCartPage">
 
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="385,207,0,0" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" >
+            <TextBlock Text="Список товаров"
+                   FontSize="30" 
+                   HorizontalAlignment="Center"/>
+        </Border>
+        
+
+        <ListView Grid.Row="2" x:Name="LvProduct" Margin="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="{x:Null}"  >
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+
+
+
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border  Height="130" Width="100" BorderBrush="Black">
+
+                        <StackPanel Margin="0,0,0,-25">
+                            <Image Margin="1 1 1 1" x:Name="ProdImg" Source="/Images/боты.jpg" >
+
+                            </Image>
+                            <TextBlock x:Name ="TbName"  Text="{Binding ProductName}"/>
+                            <TextBlock Text="{Binding Price}"/>
+                            <WrapPanel>
+                                
+                                <Button x:Name="btnDeleteFromCart" Margin="20 0 0 0" Width="60" Height="20" Background="#FFD93D3D" Content="Удалить" FontSize="10" Click="btnDeleteFromCart_Click"  />
+
+                            </WrapPanel>
+
+                        </StackPanel>
+                    </Border>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+
+        
+       
+
 
     </Grid>
 </Page>

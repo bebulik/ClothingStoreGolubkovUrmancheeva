@@ -12,10 +12,10 @@
                 <Button x:Name="btnEmpl" Content="Работники" Width="100" Height="30" Margin="0 0 150 0" Click="button_Click"/>
                 <Button x:Name="btnClothes" Content="Товары" Width="100" Height="30" Margin="0 0 150 0" Click="btnClothes_Click"/>
                 <Button x:Name="btnClients" Content="Список клиентов" Width="100" Height="30" Margin="0 0 150 0" Click="btnClients_Click"/>
-                <Button x:Name="button3" Content="Button" Width="100" Height="30" Margin="0 0 0 0"/>
+                <Button x:Name="btnCart" Content="Корзина" Width="100" Height="30" Margin="0 0 0 0" Click="btnCart_Click"/>
             </WrapPanel>
         </Border>
-        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame"   />
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Margin="0,76,0,0"   />
 
     </Grid>
 </Window>

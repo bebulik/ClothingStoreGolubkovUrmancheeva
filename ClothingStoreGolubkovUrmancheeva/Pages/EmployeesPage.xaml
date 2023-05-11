@@ -12,7 +12,15 @@
         
         <DataGrid x:Name="dgEmpl" MouseDoubleClick="dgEmpl_MouseDoubleClick" >
             <DataGrid.Columns>
-                
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}"/>
+                <DataGridTextColumn Header="День Рождения" Binding="{Binding Birthdate}"/>
+                <DataGridTextColumn Header="Должность" Binding="{Binding RoleName}"/>
+                <DataGridTextColumn Header="Пол" Binding="{Binding GenderId}"/>
+                <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}"/>
             </DataGrid.Columns>
 
         </DataGrid>

@@ -64,5 +64,17 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
 
             GetListProduct();
         }
+
+        private void btnAddToCart_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            Product selectedProduct = button.DataContext as Product;
+            ClassHelper.CartClass.products.Add(selectedProduct);
+        }
     }
 }
