@@ -60,14 +60,14 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
 
         private void btnEditEmpl_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User();
-            user.Gender = dgEmpl.log as Gender;
-            user.Phone = dgEmpl.
-            EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow(user);
-            Console.WriteLine(user);
-            employeeAddEditWindow.Show();
+            //User user = new User();
+            //user.Gender = dgEmpl. as Gender;
+            //user.Phone = dgEmpl.
+            //EmployeeAddEditWindow employeeAddEditWindow = new EmployeeAddEditWindow(user);
+            //Console.WriteLine(user);
+            //employeeAddEditWindow.Show();
             
-            GetListEmployee();
+            //GetListEmployee();
         }
     }
 }

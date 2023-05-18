@@ -34,9 +34,9 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border  Height="130" Width="100" BorderBrush="Black">
+                    <Border x:Name="bdCart" Height="179" Width="100" BorderBrush="Black" Background="{Binding Color}">
 
-                        <StackPanel Margin="0,0,0,-25">
+                        <StackPanel Margin="0,0,0,-2">
                             <Image Margin="1 1 1 1" x:Name="ProdImg" Source="/Images/боты.jpg" >
 
                             </Image>
@@ -47,6 +47,7 @@
                                 <Button x:Name="btnDeleteFromCart" Margin="20 0 0 0" Width="60" Height="20" Background="#FFD93D3D" Content="Удалить" FontSize="10" Click="btnDeleteFromCart_Click"  />
 
                             </WrapPanel>
+                            <TextBlock x:Name="TbCount" Text="{Binding Count}"></TextBlock>
 
                         </StackPanel>
                     </Border>

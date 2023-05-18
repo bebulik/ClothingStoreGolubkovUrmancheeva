@@ -29,6 +29,7 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
         public void GetCartList()
         {
             LvProduct.ItemsSource = ClassHelper.CartClass.products;
+            
         }
 
         private void btnDeleteFromCart_Click(object sender, RoutedEventArgs e)
@@ -41,8 +42,21 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
             }
 
             Product selectedProduct = button.DataContext as Product;
-            ClassHelper.CartClass.products.Remove(selectedProduct);
-            GetCartList();
+            if (selectedProduct.Count == 1)
+            {
+                ClassHelper.CartClass.products.Remove(selectedProduct);
+                GetCartList();
+            }
+            else if (ClassHelper.CartClass.products.Contains(selectedProduct))
+            {
+                int a = ClassHelper.CartClass.products.IndexOf(selectedProduct);
+                ClassHelper.CartClass.products[a].Count--;
+                GetCartList();
+            }
+            
+            
+            
+
         }
     }
 }

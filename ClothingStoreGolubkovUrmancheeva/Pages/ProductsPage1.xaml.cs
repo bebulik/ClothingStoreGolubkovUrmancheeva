@@ -74,7 +74,18 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
             }
 
             Product selectedProduct = button.DataContext as Product;
-            ClassHelper.CartClass.products.Add(selectedProduct);
+            if(ClassHelper.CartClass.products.IndexOf(selectedProduct) == -1)
+            {
+                ClassHelper.CartClass.products.Add(selectedProduct);
+                int a = ClassHelper.CartClass.products.IndexOf(selectedProduct);
+                ClassHelper.CartClass.products[a].Count = 1;
+            }
+            else
+            {
+                int a  =ClassHelper.CartClass.products.IndexOf(selectedProduct);
+                ClassHelper.CartClass.products[a].Count++;
+            }
+            
         }
     }
 }
