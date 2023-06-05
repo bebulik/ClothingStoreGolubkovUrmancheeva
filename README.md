@@ -5,14 +5,14 @@
 ![image](https://user-images.githubusercontent.com/123931026/216277252-38b5e23b-594c-4588-a2e1-2aa0ad5ae186.png)
 <b>Структура базы данных</b>
 
-![image](https://user-images.githubusercontent.com/123931026/215418194-ec25d4e5-3801-48a6-9429-dc10d4291e6d.png)
+![image](https://github.com/bebulik/ClothingStoreGolubkovUrmancheeva/assets/123931026/20006d74-4239-4ab4-993f-8fb36d5c4c34)
 <b>Структура проекта</b>
 
-![image](https://user-images.githubusercontent.com/123931026/216389928-ca9f5bb6-2464-4b62-af53-bd08a6e6a711.png)
+![image](https://github.com/bebulik/ClothingStoreGolubkovUrmancheeva/assets/123931026/d603a293-0e2b-42b7-871a-4b4c392e2b90)
 
 <b>Окно регистрации</b>
 
-![image](https://user-images.githubusercontent.com/123931026/216277038-5b687c28-386a-4740-ba01-418de8a79645.png)
+![image](https://github.com/bebulik/ClothingStoreGolubkovUrmancheeva/assets/123931026/76210a73-8aba-431a-8a66-f276e1a6303f)
 <b>Окно авторизации</b>
 
 ![image](https://user-images.githubusercontent.com/123931026/215418599-e397f7b5-4d67-41f3-a5ab-3b5e614849a3.png)
