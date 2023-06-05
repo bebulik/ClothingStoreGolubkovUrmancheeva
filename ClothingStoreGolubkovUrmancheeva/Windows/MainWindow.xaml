@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width=" 1200">
     <Grid>
-        <Border BorderThickness="1" HorizontalAlignment="Center" Height="78" Margin="0,-3,0,0" VerticalAlignment="Top" Width="1202" Background="#FFD93D3D">
+        <Border BorderThickness="1" HorizontalAlignment="Center" Height="78" Margin="0,-3,0,0" VerticalAlignment="Top" Width="1202" Background="IndianRed">
             <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button x:Name="btnEmpl" Content="Работники" Width="100" Height="30" Margin="0 0 150 0" Click="button_Click"/>
-                <Button x:Name="btnClothes" Content="Товары" Width="100" Height="30" Margin="0 0 150 0" Click="btnClothes_Click"/>
-                <Button x:Name="btnClients" Content="Список клиентов" Width="100" Height="30" Margin="0 0 150 0" Click="btnClients_Click"/>
-                <Button x:Name="btnCart" Content="Корзина" Width="100" Height="30" Margin="0 0 0 0" Click="btnCart_Click"/>
+                <Button x:Name="btnEmpl" Content="Работники" Width="100" Height="30" FontSize="20" Margin="0 0 150 0" FontFamily = "Candara Light" Foreground="AliceBlue" Background="{x:Null}" BorderBrush="{x:Null}" Click="button_Click"/>
+                <Button x:Name="btnClothes" Content="Товары" Width="100" Height="30" FontSize="20" Margin="0 0 150 0" FontFamily = "Candara Light" Foreground="AliceBlue" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnClothes_Click"/>
+                <Button x:Name="btnClients" Content="Список клиентов" Width="150" Height="30" Margin="0 0 150 0" FontSize="20" FontFamily = "Candara Light" Foreground="AliceBlue" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnClients_Click"/>
+                <Button x:Name="btnCart" Content="Корзина" Width="100" Height="30" Margin="0 0 0 0" FontSize="20" FontFamily = "Candara Light" Foreground="AliceBlue" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnCart_Click"/>
             </WrapPanel>
         </Border>
         <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Margin="0,76,0,0"   />

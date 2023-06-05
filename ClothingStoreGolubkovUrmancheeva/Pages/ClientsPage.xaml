@@ -12,9 +12,8 @@
         <DataGrid x:Name="dgClients" Margin="0,37,0,0">
             
         </DataGrid>
-        <Button x:Name="btnEdit" Width="100" Height="30" Margin="13,411,687,9" Content="Изменить клиента" FontSize="10"/>
-        <Button x:Name="btnAdd" Width="100" Height="30" Margin="691,416,9,4" Content="Добавить клиента" FontSize="10" Click="btnAdd_Click"/>
-        
-
+        <Button x:Name="btnEdit" Margin="650,401,0,10" Width="140" Height="30" Background="IndianRed" BorderBrush="{x:Null}" Foreground="AliceBlue" FontFamily="Candara Light" Content="Изменить клиента" FontSize="10"/>
+        <Button x:Name="btnAdd"  Margin="0,401,650,10" Width="140" Height="30" Background="IndianRed" BorderBrush="{x:Null}" Foreground="AliceBlue" FontFamily="Candara Light" Content="Добавить клиента" FontSize="10"
+/>
     </Grid>
 </Page>

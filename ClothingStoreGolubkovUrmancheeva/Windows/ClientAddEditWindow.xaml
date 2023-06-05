@@ -5,32 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClothingStoreGolubkovUrmancheeva.Windows"
         mc:Ignorable="d"
-        Title="ClientAddEditWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel>
-            <TextBlock Text="Логин"  />
+        Title="ClientAddEditWindow" Height="700" Width="500">
+    <Grid Background="IndianRed">
+        <TextBlock Text="Добавление клиента" Foreground="AliceBlue" HorizontalAlignment="Center" FontFamily="Candara Light" FontSize ="20" Margin="0 0 0 0" FontStyle="Italic"/>
+        <StackPanel Background="AliceBlue"  Margin="25 25 25 25">
+            <TextBlock Text="Логин" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
             <TextBox x:Name="tbLogin" />
-            <TextBlock Text="Пароль"/>
+            <TextBlock Text="Пароль" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
             <PasswordBox x:Name="pbPass"/>
-            <TextBlock Text="Фамилия"/>
-            <TextBox x:Name="tbLastName"/>
-            <TextBlock Text="Имя"/>
+            <TextBlock Text="Фамилия" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
+            <TextBox x:Name="tbLastName" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
+            <TextBlock Text="Имя" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
             <TextBox x:Name="tbFirstName"/>
-            <TextBlock Text="Отчество"/>
+            <TextBlock Text="Отчество" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
             <TextBox x:Name="tbPatr"/>
-            <TextBlock Text="Номер телефона"/>
+            <TextBlock Text="Номер телефона" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
             <TextBox x:Name="tbPhone"/>
-            <TextBlock Text="Дата рождения"/>
-            <DatePicker x:Name="dpBirth"/>
-            <TextBlock Text="Пол"/>
-            <ComboBox SelectedIndex="0" x:Name="cbGender">
+            <TextBlock Text="Дата рождения" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
+            <DatePicker x:Name="dpBirth" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
+            <TextBlock Text="Пол" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0"/>
+            <ComboBox SelectedIndex="0" x:Name="cbGender" FontSize="20" FontFamily="Candara Light" Margin="0 8 0 0">
                 <ComboBoxItem Content="м"/>
                 <ComboBoxItem Content="ж"/>
 
             </ComboBox>
-            <TextBlock Text="Должность"/>
-            
-            <Button x:Name="btnAdd" Height="50" Click="btnAdd_Click"/>
+
+            <Button x:Name="btnAdd" Content="Добавить" FontSize="20" 
+                    Height="40" Width="150" Click="btnAdd_Click" Margin="0 20 0 0" 
+                    FontFamily="Candara Light" Foreground="AliceBlue" 
+                    Background="IndianRed" BorderBrush="{x:Null}"/>
         </StackPanel>
     </Grid>
 </Window>

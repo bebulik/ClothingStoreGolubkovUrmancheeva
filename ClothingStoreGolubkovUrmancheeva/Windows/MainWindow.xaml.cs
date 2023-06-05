@@ -32,7 +32,7 @@ namespace ClothingStoreGolubkovUrmancheeva
             if (a == 3)
             {
                 btnEmpl.Visibility = Visibility.Hidden;
-                btnClothes.Visibility = Visibility.Hidden;
+                
                 btnClients.Visibility = Visibility.Hidden;
             }
         }

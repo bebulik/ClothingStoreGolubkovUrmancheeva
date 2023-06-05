@@ -25,8 +25,8 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFD93D3D"/>
-        <Label x:Name="RegLabel" Content="Регистрация" FontSize="40" HorizontalAlignment="Left" Margin="130,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"/>
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="IndianRed"/>
+        <Label x:Name="RegLabel" Content="Регистрация" Foreground="AliceBlue" FontFamily="Candara Light" FontSize="40" HorizontalAlignment="Left" Margin="130,-4,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"/>
         <Border
             BorderBrush="Black" 
             BorderThickness="1" 
@@ -40,6 +40,7 @@
             CornerRadius="10">
             <TextBox
             Text="Логин"
+                FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="TbLogin" 
@@ -63,6 +64,7 @@
             CornerRadius="10">
             <TextBox
             Text="Пароль"
+                FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="TbPassword" 
@@ -86,6 +88,7 @@
             CornerRadius="10">
             <TextBox
             Text="Фамилия"
+                FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="TbLastName" 
@@ -113,6 +116,7 @@
             FontSize="18"
             x:Name="TbFirstName" 
             Margin="55,8,9,8"
+            FontFamily="Candara Light"
             BorderBrush="{x:Null}"
             Foreground="#FF817474"
                 GotFocus="TbFirstName_GotFocus"
@@ -132,6 +136,7 @@
             CornerRadius="10">
             <TextBox
             Text="Отчество"
+                FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="TbPatronymic" 
@@ -155,6 +160,7 @@
             CornerRadius="10">
             <TextBox
             Text="Номер телефона"
+            FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="TbPhone" 
@@ -167,16 +173,20 @@
         <Button
             x:Name="BtnSignIn" 
             Content="Зарегистрироваться"
+            Foreground="AliceBlue"
             FontSize="20"  
             Grid.Column="0"
             Grid.Row="9"
-            Margin="163,16,162,1" 
+            Margin="150,16,150,1" 
             Grid.ColumnSpan="2"
-            Background="#FFD93D3D" 
+            Background="IndianRed"
+            BorderBrush="{x:Null}"
+            FontFamily="Candara Light"
             Click="BtnSignIn_Click"/>
         <Button 
             FontSize="18"
-            Content="Уже зарегистрированы ?"
+            Content="Уже зарегистрированы?"
+            FontFamily="Candara Light"
             Grid.Row="10" 
             Grid.Column="0"
             Background="{x:Null}"
@@ -186,15 +196,16 @@
             Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button 
             FontSize="18" 
-            Content="Войти как гость" 
+            Content="Войти как гость"
+            FontFamily="Candara Light"
             Grid.Row="11" Grid.Column="0" 
             Background="{x:Null}"
             BorderBrush="{x:Null}" 
             Foreground="#FF4170DD"
             Margin="173,4,177,10" 
             Grid.ColumnSpan="2"/>
-        <DatePicker x:Name="DpBirthday" Grid.Row="7" Grid.ColumnSpan="2" Margin="126,10,125,10"/>
-        <ComboBox x:Name="CmbGender" Grid.Row="8" Grid.ColumnSpan="2" Margin="126,10,125,10"/>
+        <DatePicker x:Name="DpBirthday" Grid.Row="7" Grid.ColumnSpan="2" FontFamily="Candara Light" Margin="126,10,125,10"/>
+        <ComboBox x:Name="CmbGender" FontFamily="Candara Light" Grid.Row="8" Grid.ColumnSpan="2" Margin="126,10,125,10"/>
         <Border BorderThickness="1" Grid.Row="1" Margin="126,10,83,10" Grid.Column="0">
             <Border.Background>
                 <ImageBrush ImageSource="/Images/ico.jpg"/>

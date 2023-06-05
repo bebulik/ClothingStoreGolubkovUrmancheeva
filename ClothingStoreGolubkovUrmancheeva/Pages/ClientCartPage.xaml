@@ -51,12 +51,15 @@
 
                         </StackPanel>
                     </Border>
-
+                    
                 </DataTemplate>
+                
             </ListView.ItemTemplate>
-
+            
 
         </ListView>
+        <Button x:Name="btnBuy" Width="100" Height="40" Grid.Row="3" Content="Купить" Click="btnBuy_Click"/>
+        
 
         
        

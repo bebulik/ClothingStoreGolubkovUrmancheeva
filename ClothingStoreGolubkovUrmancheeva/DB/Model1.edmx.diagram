@@ -11,11 +11,11 @@
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.Gender" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.Order" Width="1.5" PointX="7.5" PointY="4.75" />
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.Product" Width="1.5" PointX="7.5" PointY="10.625" />
+        <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.ProductOrder" Width="1.5" PointX="9.75" PointY="4.75" />
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.Role" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.Size" Width="1.5" PointX="5.25" PointY="11.125" />
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.75" />
         <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.User" Width="1.5" PointX="3" PointY="2.75" />
-        <EntityTypeShape EntityType="ClothingShopGolubkovUrmancheeva913Model.ProductOrder" Width="1.5" PointX="9.75" PointY="4.875" />
         <AssociationConnector Association="ClothingShopGolubkovUrmancheeva913Model.FK_Client_BonusCard" />
         <AssociationConnector Association="ClothingShopGolubkovUrmancheeva913Model.FK_Client_User" />
         <AssociationConnector Association="ClothingShopGolubkovUrmancheeva913Model.FK_Order_Client" />

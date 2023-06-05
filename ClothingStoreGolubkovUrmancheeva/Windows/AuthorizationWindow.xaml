@@ -24,11 +24,13 @@
             Grid.Column="0" 
             Grid.ColumnSpan="2" 
             Grid.Row="0" 
-            Background="#FFD93D3D" 
+            Background="IndianRed" 
             Margin="0,0,0,36"/>
         <Label 
             x:Name="RegLabel" 
-            Content="Авторизация" 
+            Content="Авторизация"
+            FontFamily="Candara Light"
+            Foreground="AliceBlue"
             FontSize="40" 
             HorizontalAlignment="Left"
             Margin="130,-6,0,0" 
@@ -41,26 +43,31 @@
         <Button
             x:Name="BtnSignIn" 
             Content="Авторизоваться"
+            FontFamily="Candara Light"
+            Foreground="AliceBlue"
             FontSize="20"  
             Grid.Column="0"
             Grid.Row="3"
             Margin="163,16,162,34" 
             Grid.ColumnSpan="2"
-            Background="#FFD93D3D" 
+            Background="IndianRed"
+            BorderBrush="{x:Null}"
             Click="BtnSignIn_Click"/>
         <Button 
             FontSize="18"
-            Content="Еще не зарегистрированы ?"
+            Content="Еще не зарегистрированы?"
+            FontFamily="Candara Light"
             Grid.Row="4" 
             Grid.Column="0"
             Background="{x:Null}"
             BorderBrush="{x:Null}"
             Foreground="#FF4170DD"
-            Margin="129,9,133,56" 
+            Margin="132,28,130,38" 
             Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button 
             FontSize="18" 
-            Content="Войти как гость" 
+            Content="Войти как гость"
+            FontFamily="Candara Light"
             Grid.Row="5" Grid.Column="0" 
             Background="{x:Null}"
             BorderBrush="{x:Null}" 
@@ -80,6 +87,7 @@
             CornerRadius="10">
             <TextBox
             Text="Логин"
+                FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="TbLogin" 
@@ -104,6 +112,7 @@
             CornerRadius="10">
             <TextBox 
             Text="Пароль"
+                FontFamily="Candara Light"
             TextAlignment="Left"
             FontSize="18"
             x:Name="PbPassword" 

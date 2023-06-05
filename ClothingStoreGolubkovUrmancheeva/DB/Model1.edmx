@@ -56,19 +56,15 @@
           <Property Name="Image" Type="varbinary(max)" />
           <Property Name="SizeId" Type="int" Nullable="false" />
         </EntityType>
-        <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "ClothingShopGolubkovUrmancheeva913.dbo.ProductOrder" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="ProductOrder">
           <Key>
-            <PropertyRef Name="ProductId" />
-            <PropertyRef Name="OrderId" />
-            <PropertyRef Name="Quantity" />
-            <PropertyRef Name="Price" />
+            <PropertyRef Name="ProductOrderId" />
           </Key>
-          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
           <Property Name="OrderId" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
           <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="ProductOrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -236,18 +232,11 @@
           <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductOrder" EntityType="Self.ProductOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Size" EntityType="Self.Size" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ProductOrder" EntityType="Self.ProductOrder" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [ProductOrder].[ProductId] AS [ProductId], 
-    [ProductOrder].[OrderId] AS [OrderId], 
-    [ProductOrder].[Quantity] AS [Quantity], 
-    [ProductOrder].[Price] AS [Price]
-    FROM [dbo].[ProductOrder] AS [ProductOrder]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Client_BonusCard" Association="Self.FK_Client_BonusCard">
             <End Role="BonusCard" EntitySet="BonusCard" />
             <End Role="Client" EntitySet="Client" />
@@ -300,11 +289,11 @@
           <EntitySet Name="Gender" EntityType="ClothingShopGolubkovUrmancheeva913Model.Gender" />
           <EntitySet Name="Order" EntityType="ClothingShopGolubkovUrmancheeva913Model.Order" />
           <EntitySet Name="Product" EntityType="ClothingShopGolubkovUrmancheeva913Model.Product" />
+          <EntitySet Name="ProductOrder" EntityType="ClothingShopGolubkovUrmancheeva913Model.ProductOrder" />
           <EntitySet Name="Role" EntityType="ClothingShopGolubkovUrmancheeva913Model.Role" />
           <EntitySet Name="Size" EntityType="ClothingShopGolubkovUrmancheeva913Model.Size" />
           <EntitySet Name="sysdiagrams" EntityType="ClothingShopGolubkovUrmancheeva913Model.sysdiagrams" />
           <EntitySet Name="User" EntityType="ClothingShopGolubkovUrmancheeva913Model.User" />
-          <EntitySet Name="ProductOrder" EntityType="ClothingShopGolubkovUrmancheeva913Model.ProductOrder" />
           <AssociationSet Name="FK_Client_BonusCard" Association="ClothingShopGolubkovUrmancheeva913Model.FK_Client_BonusCard">
             <End Role="BonusCard" EntitySet="BonusCard" />
             <End Role="Client" EntitySet="Client" />
@@ -409,6 +398,18 @@
           <NavigationProperty Name="Size" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_Product_Size" FromRole="Product" ToRole="Size" />
           <NavigationProperty Name="ProductOrder" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_ProductOrder_Product" FromRole="Product" ToRole="ProductOrder" />
         </EntityType>
+        <EntityType Name="ProductOrder">
+          <Key>
+            <PropertyRef Name="ProductOrderId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="ProductOrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Order" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_ProductOrder_Order" FromRole="ProductOrder" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_ProductOrder_Product" FromRole="ProductOrder" ToRole="Product" />
+        </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="RoleId" />
@@ -453,20 +454,6 @@
           <NavigationProperty Name="Employee" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_Employee_User" FromRole="User" ToRole="Employee" />
           <NavigationProperty Name="Gender" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_User_Gender" FromRole="User" ToRole="Gender" />
           <NavigationProperty Name="Role" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_User_Role1" FromRole="User" ToRole="Role" />
-        </EntityType>
-        <EntityType Name="ProductOrder">
-          <Key>
-            <PropertyRef Name="ProductId" />
-            <PropertyRef Name="OrderId" />
-            <PropertyRef Name="Quantity" />
-            <PropertyRef Name="Price" />
-          </Key>
-          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OrderId" Type="Int32" Nullable="false" />
-          <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <NavigationProperty Name="Order" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_ProductOrder_Order" FromRole="ProductOrder" ToRole="Order" />
-          <NavigationProperty Name="Product" Relationship="ClothingShopGolubkovUrmancheeva913Model.FK_ProductOrder_Product" FromRole="ProductOrder" ToRole="Product" />
         </EntityType>
         <Association Name="FK_Client_BonusCard">
           <End Type="ClothingShopGolubkovUrmancheeva913Model.BonusCard" Role="BonusCard" Multiplicity="1" />
@@ -651,6 +638,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ProductOrder">
+            <EntityTypeMapping TypeName="ClothingShopGolubkovUrmancheeva913Model.ProductOrder">
+              <MappingFragment StoreEntitySet="ProductOrder">
+                <ScalarProperty Name="ProductOrderId" ColumnName="ProductOrderId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Role">
             <EntityTypeMapping TypeName="ClothingShopGolubkovUrmancheeva913Model.Role">
               <MappingFragment StoreEntitySet="Role">
@@ -691,16 +689,6 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ProductOrder">
-            <EntityTypeMapping TypeName="ClothingShopGolubkovUrmancheeva913Model.ProductOrder">
-              <MappingFragment StoreEntitySet="ProductOrder">
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

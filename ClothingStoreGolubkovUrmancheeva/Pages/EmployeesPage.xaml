@@ -24,8 +24,8 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button Margin="650,401,20,10" x:Name="btnAddEmpl" Content="Добавить работника" Click="btnAddEmpl_Click"/>
-        <Button Margin="20,401,650,10" x:Name="btnEditEmpl" Content="Изменить работника" Click="btnEditEmpl_Click"/>
+        <Button Margin="650,401,0,10" x:Name="btnAddEmpl" Width="140" Height="30" Background="IndianRed" BorderBrush="{x:Null}" Foreground="AliceBlue" FontFamily="Candara Light" Content="Добавить работника" Click="btnAddEmpl_Click"/>
+        <Button Margin="0,401,650,10" x:Name="btnEditEmpl" Width="140" Height="30" Background="IndianRed" BorderBrush="{x:Null}" Foreground="AliceBlue" FontFamily="Candara Light" Content="Изменить работника" Click="btnEditEmpl_Click"/>
 
     </Grid>
 </Page>

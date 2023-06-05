@@ -1,4 +1,5 @@
-﻿using ClothingStoreGolubkovUrmancheeva.DB;
+﻿using ClothingStoreGolubkovUrmancheeva.ClassHelper;
+using ClothingStoreGolubkovUrmancheeva.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,18 +46,52 @@ namespace ClothingStoreGolubkovUrmancheeva.Pages
             if (selectedProduct.Count == 1)
             {
                 ClassHelper.CartClass.products.Remove(selectedProduct);
-                GetCartList();
+                
             }
             else if (ClassHelper.CartClass.products.Contains(selectedProduct))
             {
                 int a = ClassHelper.CartClass.products.IndexOf(selectedProduct);
                 ClassHelper.CartClass.products[a].Count--;
-                GetCartList();
+                
             }
+            
             
             
             
 
         }
+
+        private void btnBuy_Click(object sender, RoutedEventArgs e)
+        {
+            List<Client> clients = new List<Client>();
+            clients = EFClass.Context.Client.ToList();
+            int id = UserClass.user.UserId;
+
+            Order order = new Order()
+            {
+                ClientId = clients.Where(x => x.UserId == id).First().ClientId,
+                EmployeeId = 1,
+                DateTime = DateTime.Now
+
+            };
+            EFClass.Context.Order.Add(order);
+            EFClass.Context.SaveChanges();
+            foreach (var item in CartClass.products)
+            {
+                ProductOrder po = new ProductOrder()
+                {
+                    ProductId = item.ProductId,
+                    OrderId = order.OrderId,
+                    Quantity = item.Count,
+                    Price = item.Price * item.Count
+                };
+                EFClass.Context.ProductOrder.Add(po);
+
+            }
+            EFClass.Context.SaveChanges();
+            MessageBox.Show("Покупка прошла успешно");
+
+        }
     }
 }
+
